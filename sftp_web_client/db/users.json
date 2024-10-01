@@ -1,0 +1,9 @@
+{
+  "1": {
+    "id": 1,
+    "username": "vulcanocraft",
+    "passwordHash": "2b2f513196e8f6bc9f59aed30e156f32",
+    "loginHash": "1815d55d61aa4d6c3df92373f37326de",
+    "admin": true
+  }
+}

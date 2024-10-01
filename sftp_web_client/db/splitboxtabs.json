@@ -1,0 +1,12 @@
+{
+  "tabs": {
+    "1": [
+      {
+        "template": "servermanager",
+        "params": {},
+        "text": "Servermanager",
+        "active": true
+      }
+    ]
+  }
+}

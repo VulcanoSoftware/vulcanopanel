@@ -1,0 +1,23 @@
+{
+    "critics": {
+        "lint": {
+            "engine": "standard"
+        },
+        "wc": {
+            "limit": 5000
+        }
+    },
+    "dependencies": {
+        "mute": [
+            "read-config",
+            "socket.io",
+            "standard",
+            "bithound"
+        ]
+    },
+    "ignore": [
+        "public/src/**",
+        "public/webssh2.js",
+        "public/webssh2.min.js"
+    ]
+}

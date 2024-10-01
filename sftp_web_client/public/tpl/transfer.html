@@ -1,0 +1,87 @@
+<div class="header tabs">
+    <div class="tab active" data-id="transfer.queue">
+        <span class="glyphicon glyphicon-indent-left"></span>
+        <span data-translate="transfer.queue"></span>
+        <span class="counter"></span>
+    </div>
+    <div class="tab" data-id="transfer.error">
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <span data-translate="transfer.error"></span>
+        <span class="counter"></span>
+    </div>
+    <div class="tab" data-id="transfer.success">
+        <span class="glyphicon glyphicon-ok"></span>
+        <span data-translate="transfer.success"></span>
+        <span class="counter"></span>
+    </div>
+    <div class="tab" data-id="transfer.transfering">
+        <span class="glyphicon glyphicon-transfer"></span>
+        <span data-translate="transfer.transfering"></span>
+        <span class="counter"></span>
+    </div>
+</div>
+
+<div class="main">
+    <div class="tab-container transfers active status-queue" data-id="transfer.queue"></div>
+    <div class="tab-container transfers status-error" data-id="transfer.error"></div>
+    <div class="tab-container transfers status-success" data-id="transfer.success"></div>
+    <div class="tab-container transfers status-transfering" data-id="transfer.transfering"></div>
+</div>
+
+<div class="footer">
+    <span class="total-size">
+        <span data-translate="transfer.total.size"></span>:
+        <span class="number"></span>
+    </span>
+    |
+    <span class="transfer-speed">
+        <span data-translate="transfer.speed"></span>:
+        <span class="number"></span>
+    </span>
+</div>
+<div class="boilerplate table-files" data-id="transfer">
+    <table>
+        <thead>
+        <tr class="header">
+            <th class="id">ID</th>
+            <th class="mode" data-translate="mode"></th>
+            <th class="server" data-translate="server"></th>
+            <th class="server-path" data-translate="server.path"></th>
+            <th class="local-path" data-translate="local.path"></th>
+            <th class="size" data-translate="filesize"></th>
+            <th class="transfered" data-translate="progress"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="boilerplate entry">
+            <td class="id"></td>
+            <td class="mode"></td>
+            <td class="server"></td>
+            <td class="server-path"></td>
+            <td class="local-path"></td>
+            <td class="size"></td>
+            <td class="transfered">
+                <div class="text"></div>
+                <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-info"></div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="contextmenu" data-id="transfer">
+    <div class="entry start">
+        <span class="glyphicon glyphicon-download"></span> <span data-translate="transfer.start"></span>
+    </div>
+    <div class="entry stop">
+        <span class="glyphicon glyphicon-stop"></span> <span data-translate="transfer.stop"></span>
+    </div>
+    <div class="entry remove" data-action="removeFromTransfer">
+        <span class="glyphicon glyphicon-remove"></span> <span data-translate="transfer.remove"></span>
+    </div>
+    <div class="entry move" data-action="resetTransfer">
+        <span class="glyphicon glyphicon-transfer"></span> <span data-translate="transfer.move"></span>
+    </div>
+</div>
