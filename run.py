@@ -12,17 +12,19 @@ print("the webserver is running on http://localhost:8000")
 
 def load_config():
     config_path = os.path.join(path, 'config.yml')
+    config = {}  
     if os.path.exists(config_path):
         try:
             with open(config_path, 'r') as file:
-                config = yaml.safe_load(file)
+                config = yaml.safe_load(file) or {}  
                 return config
         except Exception as e:
             print(f"Error loading config.yml: {e}")
-            return {}
+            return config  
     else:
         print("config.yml not found, an empty configuration is being used.")
-        return {}
+        return config 
+
 
 def save_config(config):
     config_path = os.path.join(path, 'config.yml')
