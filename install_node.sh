@@ -1,15 +1,21 @@
-#!/bin/sh
-# installs fnm (Fast Node Manager)
-$ curl -fsSL https://fnm.vercel.app/install | bash
+#!/bin/bash
 
-# activate fnm
-$ source ~/.bashrc
+# Installs fnm (Fast Node Manager) via curl
+curl -fsSL https://fnm.vercel.app/install | bash
 
-# download and install Node.js
-$ fnm use --install-if-missing 20
+# Activate fnm by adding it to the PATH
+# This might require restarting your terminal or sourcing your profile
+# Uncomment and adjust the line below if necessary
+# export PATH="$HOME/.fnm:$PATH"
 
-# verifies the right Node.js version is in the environment
-$ node -v # should print `v20.17.0`
+# Download and install Node.js version 20 using fnm
+fnm install 20
+fnm use 20
 
-# verifies the right npm version is in the environment
-$ npm -v # should print `10.8.2`
+# Verifies the right Node.js version is in the environment
+node -v
+
+# Verifies the right npm version is in the environment
+npm -v
+
+read -p "Press any key to continue..."
