@@ -93,22 +93,24 @@ def execute_debian_code():
     path_node_deb = os.path.join(path, "install_node.sh")
     path_install_deb = os.path.join(path, "install.sh")
     path_start_deb = os.path.join(path, "start.sh")
+    path_setup_ssh_sftp_deb = os.path.join(path, "setup_ssh_sftp.sh")
     path_linux = os.path.join(path, "linux")
     install_sftp_deb = os.path.join(path_linux, "install_sftp.sh")
     install_ssh_deb = os.path.join(path_linux, "install_ssh.sh")
     start_sftp_deb = os.path.join(path_linux, "start_sftp.sh")
     start_ssh_deb = os.path.join(path_linux, "start_ssh.sh")
 
-    run_subprocess(['sudo', 'apt', 'install', 'firewalld', '-y'])
-    run_subprocess(['sudo', 'systemctl', 'start', 'firewalld'])
-    run_subprocess(['sudo', 'systemctl', 'enable', 'firewalld'])
-
-    for script in [path_node_deb, path_install_deb, path_start_deb, install_sftp_deb, install_ssh_deb, start_sftp_deb, start_ssh_deb]:
+    for script in [path_node_deb, path_install_deb, path_start_deb, install_sftp_deb, install_ssh_deb, start_sftp_deb, start_ssh_deb, path_setup_ssh_sftp_deb]:
         try:
             os.chmod(script, stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR | stat.S_IRGRP | stat.S_IXGRP | stat.S_IROTH | stat.S_IXOTH)
             print(f"Permissions successfully set for {script}.")
         except Exception as e:
             print(f"Error setting permissions for {script}: {e}")
+
+    run_subprocess(['bash', path_setup_ssh_sftp_deb])
+    run_subprocess(['sudo', 'apt', 'install', 'firewalld', '-y'])
+    run_subprocess(['sudo', 'systemctl', 'start', 'firewalld'])
+    run_subprocess(['sudo', 'systemctl', 'enable', 'firewalld'])
 
     if ask_question("Is Node.js already installed? (Y/N)", "node_installed") == "n":
         run_subprocess(['bash', path_node_deb])
@@ -118,8 +120,8 @@ def execute_debian_code():
 
     if input("Do you want to start the program now? (Y/N)").lower() == "y":
         print("===================================================================")
-        print("The sftp server is running on http://localhost:4340/")
-        print("The webssh server is running on http://localhost:2222/ssh/host/127.0.0.1")
+        print("The sftp server is running on http://localhost:8001/")
+        print("The webssh server is running on http://localhost:8002/ssh/host/127.0.0.1")
         print("===================================================================")
         print("go to http://localhost:8000 for the main panel")
         run_subprocess(['bash', path_start_deb])
@@ -130,17 +132,24 @@ def execute_fedora_code():
     path_node_fedora = os.path.join(path, "install_node_fedora.sh")
     path_install_fedora = os.path.join(path, "install_fedora.sh")
     path_start_fedora = os.path.join(path, "start_fedora.sh")
-    
-    run_subprocess(['sudo', 'dnf', 'install', 'firewalld', '-y'])
-    run_subprocess(['sudo', 'systemctl', 'start', 'firewalld'])
-    run_subprocess(['sudo', 'systemctl', 'enable', 'firewalld'])
+    path_setup_ssh_sftp_fedora = os.path.join(path, "setup_ssh_sftp_fedora.sh")
+    path_linux = os.path.join(path, "linux")
+    install_sftp_fedora = os.path.join(path_linux, "install_sftp.sh")
+    install_ssh_fedora = os.path.join(path_linux, "install_ssh.sh")
+    start_sftp_fedora = os.path.join(path_linux, "start_sftp.sh")
+    start_ssh_fedora = os.path.join(path_linux, "start_ssh.sh")
 
-    for script in [path_node_fedora, path_install_fedora, path_start_fedora]:
+    for script in [path_node_fedora, path_install_fedora, path_start_fedora, path_setup_ssh_sftp_fedora, install_sftp_fedora, install_ssh_fedora, start_sftp_fedora, start_ssh_fedora]:
         try:
             os.chmod(script, stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR | stat.S_IRGRP | stat.S_IXGRP | stat.S_IROTH | stat.S_IXOTH)
             print(f"Permissions successfully set for {script}.")
         except Exception as e:
             print(f"Error setting permissions for {script}: {e}")
+
+    run_subprocess(['sudo', 'dnf', 'install', 'firewalld', '-y'])
+    run_subprocess(['sudo', 'systemctl', 'start', 'firewalld'])
+    run_subprocess(['sudo', 'systemctl', 'enable', 'firewalld'])
+    run_subprocess(['bash', path_setup_ssh_sftp_fedora])
 
     if ask_question("Is Node.js already installed? (Y/N)", "node_installed_fedora") == "n":
         run_subprocess(['bash', path_node_fedora])
@@ -150,8 +159,8 @@ def execute_fedora_code():
 
     if input("Do you want to start the program now? (Y/N)").lower() == "y":
         print("===================================================================")
-        print("The sftp server is running on http://localhost:4340/")
-        print("The webssh server is running on http://localhost:2222/ssh/host/127.0.0.1")
+        print("The sftp server is running on http://localhost:8001/")
+        print("The webssh server is running on http://localhost:8002/ssh/host/127.0.0.1")
         print("===================================================================")
         print("go to http://localhost:8000 for the main panel")
         run_subprocess(['bash', path_start_fedora])
@@ -162,17 +171,24 @@ def execute_arch_code():
     path_node_arch = os.path.join(path, "install_node_arch.sh")
     path_install_arch = os.path.join(path, "install_arch.sh")
     path_start_arch = os.path.join(path, "start_arch.sh")
-    
-    run_subprocess(['sudo', 'pacman', '-S', 'firewalld', '--noconfirm'])
-    run_subprocess(['sudo', 'systemctl', 'start', 'firewalld'])
-    run_subprocess(['sudo', 'systemctl', 'enable', 'firewalld'])
+    path_setup_ssh_sftp_arch = os.path.join(path, "setup_ssh_sftp_arch.sh")
+    path_linux = os.path.join(path, "linux")
+    install_sftp_arch = os.path.join(path_linux, "install_sftp_arch.sh")
+    install_ssh_arch = os.path.join(path_linux, "install_ssh_arch.sh")
+    start_sftp_arch = os.path.join(path_linux, "start_sftp_arch.sh")
+    start_ssh_arch = os.path.join(path_linux, "start_ssh_arch.sh")
 
-    for script in [path_node_arch, path_install_arch, path_start_arch]:
+    for script in [path_node_arch, path_install_arch, path_start_arch, install_sftp_arch, install_ssh_arch, start_sftp_arch, start_ssh_arch]:
         try:
             os.chmod(script, stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR | stat.S_IRGRP | stat.S_IXGRP | stat.S_IROTH | stat.S_IXOTH)
             print(f"Permissions successfully set for {script}.")
         except Exception as e:
             print(f"Error setting permissions for {script}: {e}")
+
+    run_subprocess(['bash', path_setup_ssh_sftp_arch])
+    run_subprocess(['sudo', 'pacman', '-S', 'firewalld', '--noconfirm'])
+    run_subprocess(['sudo', 'systemctl', 'start', 'firewalld'])
+    run_subprocess(['sudo', 'systemctl', 'enable', 'firewalld'])
 
     if ask_question("Is Node.js already installed? (Y/N)", "node_installed_arch") == "n":
         run_subprocess(['bash', path_node_arch])
@@ -182,8 +198,8 @@ def execute_arch_code():
 
     if input("Do you want to start the program now? (Y/N)").lower() == "y":
         print("===================================================================")
-        print("The sftp server is running on http://localhost:4340/")
-        print("The webssh server is running on http://localhost:2222/ssh/host/127.0.0.1")
+        print("The sftp server is running on http://localhost:8001/")
+        print("The webssh server is running on http://localhost:8002/ssh/host/127.0.0.1")
         print("===================================================================")
         print("go to http://localhost:8000 for the main panel")
         run_subprocess(['bash', path_start_arch])
@@ -209,8 +225,8 @@ def execute_windows_code():
     start = input("Do you want to start the program now? (Y/N)").lower()
     if start == "y":
         print("===================================================================")
-        print("The sftp server is running on http://localhost:4340/")
-        print("The webssh server is running on http://localhost:2222/ssh/host/127.0.0.1")
+        print("The sftp server is running on http://localhost:8001/")
+        print("The webssh server is running on http://localhost:8002/ssh/host/127.0.0.1")
         print("===================================================================")
         print("go to http://localhost:8000 for the main panel")
         run_subprocess([path_start_win])

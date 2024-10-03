@@ -16,7 +16,7 @@ REM Toon netwerkconfiguratie
 ipconfig
 
 REM Toon serverinformatie
-echo The sftp server is running on http://localhost:4340/
+echo The sftp server is running on http://localhost:8001/
 
 echo Don't press any key or close this window, otherwise the program will stop.
 

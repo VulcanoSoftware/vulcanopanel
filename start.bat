@@ -11,8 +11,9 @@ REM Toon netwerkconfiguratie
 ipconfig
 
 REM Toon server URL's
-echo The sftp server is running on http://localhost:4340/
-echo The webssh server is running on http://localhost:2222/ssh/host/127.0.0.1
+echo The webserver is running on http://localhost:8000/
+echo The sftp server is running on http://localhost:8001/
+echo The webssh server is running on http://localhost:8002/ssh/host/127.0.0.1
 
 echo Don't press any key or close this window, otherwise the program will stop.
 
