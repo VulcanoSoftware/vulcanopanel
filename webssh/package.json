@@ -6,25 +6,25 @@
   ],
   "bin": "./index.js",
   "description": "A Websocket to SSH2 gateway using term.js, socket.io, ssh2, and express",
-  "homepage": "https://github.com/billchurch/WebSSH2",
+  "homepage": "https://github.com/VulcanoSoftware/vulcanopanel",
   "keywords": "ssh webssh terminal webterminal",
   "license": "SEE LICENSE IN FILE - LICENSE",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/billchurch/WebSSH2.git"
+    "url": "git+https://github.com/VulcanoSoftware/vulcanopanel.git"
   },
   "contributors": [
     {
-      "name": "Bill Church",
-      "email": "wmchurch@gmail.com"
+      "name": "VulcanoSoftware",
+      "email": "VulcanoSoftwareinc@gmail.com"
     }
   ],
   "engines": {
     "node": "0.12.7"
   },
   "bugs": {
-    "url": "https://github.com/billchurch/WebSSH2/issues"
+    "url": "https://github.com/VulcanoSoftware/vulcanopanel/issues"
   },
   "dependencies": {
     "basic-auth": "^2.0.0",

@@ -4,6 +4,7 @@
     "port": 8002
   },
   "user": {
+    //change this to your properties
     "name": "pi",
     "password": "raspberry"
   },

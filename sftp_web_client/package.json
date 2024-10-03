@@ -1,5 +1,5 @@
 {
-  "author": "BrainFooLong (https://github.com/brainfoolong/web-ftp-client)",
+  "author": "VulcanoCraft",
   "name": "web-ftp-client",
   "description": "A web based FTP client. Like a simply version filezilla but for your browser.",
   "version": "0.13.0",
@@ -7,7 +7,7 @@
   "main": "src/main.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/brainfoolong/web-ftp-client.git"
+    "url": "git://github.com/VulcanoSoftware/vulcanopanel.git"
   },
   "dependencies": {
     "express": "^4.15.2",
