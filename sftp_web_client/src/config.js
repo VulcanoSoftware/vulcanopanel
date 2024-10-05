@@ -9,7 +9,7 @@ const fs = require('fs')
  */
 let config = {
   'host': null,
-  'port': 4340,
+  'port': 1245,
   'development': false
 }
 
