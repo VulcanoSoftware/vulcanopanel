@@ -10,11 +10,13 @@ on windows:
 on linux:
 
     ubuntu:
+    
 ```
 sudo apt install python
 ```
 
     fedora:
+    
 ```
 sudo dnf install python3
 ```
@@ -38,18 +40,24 @@ after that navigate to this program folder and run run.py
 ## **how to run this program**
 
 on windows:
+
     double click run.py
 
 on linux:
     ubuntu:
+    
   ```
   sudo python3 run.py
   ```
+
     fedora:
+    
   ```
   sudo python3 run.py
   ```
+
     arch:
+    
   ```
   sudo python3 run.py
   ```
