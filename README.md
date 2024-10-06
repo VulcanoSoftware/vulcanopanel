@@ -1,4 +1,4 @@
-# <center> **VulcanoPanel** </center>
+# **VulcanoPanel**
 
 ## **how to install this program**
 
