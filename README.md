@@ -6,12 +6,15 @@ on windows:
   go to https://python.org
 
 on linux:
+
   ubuntu:
-    sudo apt install python
+                      sudo apt install python
+    
   fedora:
-    sudo dnf install python3
+                      sudo dnf install python3
   arch:
-    sudo pacman -Sy python-pip
+  
+                      sudo pacman -Sy python-pip
 
 on MacOS:
   not supported
