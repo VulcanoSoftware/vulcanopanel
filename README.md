@@ -8,8 +8,10 @@ on windows:
 on linux:
 
   ubuntu:
+```
 sudo apt install python
-    
+´´´
+
   fedora:
 sudo dnf install python3
   arch:
