@@ -28,7 +28,7 @@ on MacOS:
 
 when python is installed, you need to install only one library:
 ```
-  pip install PyYAML
+pip install PyYAML
 ```
 
 after that navigate to this program folder and run run.py
@@ -39,15 +39,15 @@ on windows:
 on linux:
   ubuntu:
   ```
-    sudo python3 run.py
+  sudo python3 run.py
   ```
   fedora:
   ```
-    sudo python3 run.py
+  sudo python3 run.py
   ```
   arch:
   ```
-    sudo python3 run.py
+  sudo python3 run.py
   ```
 
 
