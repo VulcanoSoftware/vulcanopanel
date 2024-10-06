@@ -10,7 +10,7 @@ on windows:
 on linux:
 
     **ubuntu:**
-
+´´´
 ```
 sudo apt install python
 ```
