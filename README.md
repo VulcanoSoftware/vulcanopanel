@@ -1,5 +1,7 @@
 # **VulcanoPanel**
 
+## **how to install this program**
+
 to run this program, you will need to install python.
 
 on windows:
@@ -32,6 +34,8 @@ pip install PyYAML
 ```
 
 after that navigate to this program folder and run run.py
+
+## **how to run this program**
 
 on windows:
   double click run.py
