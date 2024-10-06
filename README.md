@@ -5,20 +5,20 @@
 to run this program, you will need to install python.
 
 on windows:
-  go to https://python.org
+    go to https://python.org
 
 on linux:
 
-  ubuntu:
+    ubuntu:
 ```
 sudo apt install python
 ```
 
-  fedora:
+    fedora:
 ```
 sudo dnf install python3
 ```
-  arch:
+    arch:
 
 ```
 sudo pacman -Sy python-pip
@@ -38,18 +38,18 @@ after that navigate to this program folder and run run.py
 ## **how to run this program**
 
 on windows:
-  double click run.py
+    double click run.py
 
 on linux:
-  ubuntu:
+    ubuntu:
   ```
   sudo python3 run.py
   ```
-  fedora:
+    fedora:
   ```
   sudo python3 run.py
   ```
-  arch:
+    arch:
   ```
   sudo python3 run.py
   ```
