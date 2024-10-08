@@ -78,6 +78,8 @@ if start == "1":
             print("- ports (view the required ports for this script)")
             print("- os (view the recomended and supported operating systems)")
             print("- run (start this script when you ran all the commands)")
+            print("- ftp (view the details of the sftp server)")
+            print("- ssh (view the details of the ssh server)")
             print("=============================")
 
         elif command == "config":
@@ -166,7 +168,29 @@ if start == "1":
             print("- macOS")
             print("- unknown linux distro's")
             print("================")
-        
+
+        elif command == "ftp":
+            print("=====[sftp]=====")
+            print("for file transfers, you can use sftp with filezilla")
+            print("host: localhost")
+            print("port: 22")
+            print("username: ", ssh_user_ans)
+            print("password: ", ssh_password_ans)
+            print("----------------")
+            print("we recommend to use the main panel: https://localhost:8000")
+            print("================")
+
+        elif command == "ssh":
+            print("=====[ssh]=====")
+            print("for sending commands, you can use ssh with putty")
+            print("host: localhost")
+            print("port: 22")
+            print("username: ", ssh_user_ans)
+            print("password: ", ssh_password_ans)
+            print("----------------")
+            print("we recommend to use the main panel: https://localhost:8000")
+            print("===============")
+
         elif command == "run":
             run = 1
 

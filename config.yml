@@ -1,0 +1,6 @@
+node_installed: ''
+program_run_before: ''
+websftp_port: '1234'
+webssh_password: ''
+webssh_port: '1234'
+webssh_user: ''
