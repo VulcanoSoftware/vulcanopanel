@@ -5,9 +5,11 @@
 to run this program, you will need to install python.
 
 on windows:
-    go to https://python.org
+
+**go to https://python.org**
 
 on linux:
+
 
 **ubuntu:**
 
@@ -25,9 +27,11 @@ sudo dnf install python3
 ```
 sudo pacman -Sy python-pip
 ```
+<br>
 
 on MacOS:
-  not supported
+
+**not supported**
 
 
 when python is installed, you need to install only one library:
@@ -44,6 +48,7 @@ on windows:
     double click run.py
 
 on linux:
+
 **ubuntu:**
     
   ```
